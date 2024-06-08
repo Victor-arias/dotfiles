@@ -41,7 +41,7 @@ Restow packages:
 The `--restow` or `-R` flags allow stow to remove and add the package again, like a reset.
 
 Remove packages from target dir:
-he `--delete` or `-D` flags allow stow to remove a package from the target dir.
+The `--delete` or `-D` flags allow stow to remove a package from the target dir.
 
 ```bash
 stow <package-name> -D
