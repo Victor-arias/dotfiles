@@ -60,3 +60,6 @@ fi
 if isCommand neofetch; then
     neofetch
 fi
+
+# syntax-highlight
+source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
