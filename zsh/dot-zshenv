@@ -1,0 +1,13 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$HOME/.config/zsh"
+
+export EDITOR="nano"
+export VISUAL="code"
+
+# Commands history
+export HISTFILE="$ZDOTDIR/.zsh_history"
+export HISTSIZE=5000
+export SAVEHIST=5000
+
+#McFLy
+export MCFLY_HISTORY="$HISTFILE"

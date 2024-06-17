@@ -1,0 +1,48 @@
+# Custom aliases
+
+## Check if a command exists
+## param $1: command to test.
+## return: 0 or 1.
+function isCommand ()
+{
+    if command -v $1 &> /dev/null
+    then
+        return 0 # true
+    else
+        return 1 # false
+    fi
+}
+
+## Base tools
+alias dir='dir --color=auto'
+alias grep='grep --color=auto'
+alias nano='nano -l'
+
+#zsh
+## TODO
+if [ -v $ZDOTDIR ]; then
+    echo "It's me, zsh!"
+    alias editzsh="$EDITOR $ZDOTDIR/.zshrc"
+    alias sourcezsh="source $ZDOTDIR/.zshrc"
+else
+    echo "It's not zsh!"
+fi
+
+## ls -> lsd
+if isCommand lsd; then
+    alias ls='lsd'
+else
+    alias ls='ls --color=auto'
+fi
+alias ll='ls -alhF'
+alias la='la -A'
+
+## cat -> bat
+if isCommand bat; then
+    alias cat='bat'
+else
+    alias cat='batcat'
+fi
+
+# stow
+alias stow='stow -v'
