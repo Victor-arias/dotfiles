@@ -15,7 +15,7 @@ zstyle :compinstall filename '/home/victorarias/.zshrc'
 # Custom aliases
 ALIASES_DIR="$HOME/.config/aliases"
 if [ -d "$ALIASES_DIR" ]; then
-    source "$ALIASES_DIR/aliases"
+    source "$ALIASES_DIR/.aliases"
 fi
 
 ## Check if a command exists
