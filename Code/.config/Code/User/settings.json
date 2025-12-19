@@ -1,0 +1,43 @@
+{
+  "window.zoomLevel": 1,
+  "editor.fontSize": 14,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.fontFamily": "Fira Code, FiraCode Nerd Font, FiraCode Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontWeight": "normal",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "workbench.colorTheme": "Dracula",
+  "workbench.sideBar.location": "right",
+  "debug.console.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "terminal.external.linuxExec": "wezterm",
+  "terminal.external.osxExec": "wezterm",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "cSpell.userWords": ["firestore", "gsap"],
+  "python.analysis.fixAll": [],
+  "makefile.configureOnOpen": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}
+
