@@ -75,3 +75,11 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
