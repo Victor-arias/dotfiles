@@ -63,3 +63,15 @@ fi
 
 # syntax-highlight
 source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# opencode
+export PATH=/home/victorarias/.opencode/bin:$PATH
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
