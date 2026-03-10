@@ -41,7 +41,9 @@ function isGitRepo() {
 	onefetch
     fi
 }
-alias cd='isGitRepo'
+if isCommand onefetch; then
+    alias cd='isGitRepo'
+fi
 
 # Auto load custom commands on init
 
@@ -72,20 +74,22 @@ source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # opencode
 export PATH=/home/victorarias/.opencode/bin:$PATH
 
-# fnm
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
+if isCommand fnm; then
+    # fnm
+    FNM_PATH="$HOME/.local/share/fnm"
+    if [ -d "$FNM_PATH" ]; then
+      export PATH="$FNM_PATH:$PATH"
+      eval "`fnm env`"
+    fi
+    eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
 fi
 
-eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
+if isCommand pnpm; then
+    # pnpm
+    export PNPM_HOME="$HOME/.local/share/pnpm"
+    case ":$PATH:" in
+      *":$PNPM_HOME:"*) ;;
+      *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+    # pnpm end
+fi
