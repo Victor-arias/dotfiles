@@ -33,7 +33,7 @@
             "showPeCoreCount": true,
             "temp": true
         },
-	"cpuusage"
+	"cpuusage",
         {
             "type": "gpu",
             "driverSpecific": true,
@@ -59,7 +59,7 @@
         },
         {
             "type": "localip",
-            "showMac": true,
+            "showMac": true
         },
         "dns",
         "wifi",
