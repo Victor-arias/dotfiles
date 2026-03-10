@@ -49,3 +49,6 @@ fi
 
 # stow
 alias stow='stow -v'
+
+# fd-find
+alias find='fdfind'
