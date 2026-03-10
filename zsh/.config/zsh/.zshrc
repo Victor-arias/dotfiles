@@ -59,6 +59,11 @@ fi
 # Neofetch system info
 if isCommand neofetch; then
     neofetch
+else
+    # Fastfetch system info
+    if isCommand fastfetch; then
+        fastfetch
+    fi
 fi
 
 # syntax-highlight
@@ -83,3 +88,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
