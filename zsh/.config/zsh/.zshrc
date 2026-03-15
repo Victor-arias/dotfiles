@@ -93,3 +93,6 @@ if isCommand pnpm; then
     esac
     # pnpm end
 fi
+
+# Micro editor theming
+export MICRO_TRUECOLOR=1
